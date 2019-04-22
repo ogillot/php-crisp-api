@@ -1,6 +1,7 @@
 {
     "name": "ogillot/php-crisp-api",
     "description": "Crisp API PHP Wrapper",
+    "version": "1.5.4", 
     "type": "library",
     "license": "MIT",
     "authors": [
