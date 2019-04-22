@@ -6,6 +6,10 @@
  * Copyright: 2018, Crisp IM
  */
 
+namespace Relief\Crisp;
+
+use Relief\RestClient\RestClient;
+
 require __DIR__ . '/ressources/UserProfile.php';
 require __DIR__ . '/ressources/Website.php';
 require __DIR__ . '/ressources/WebsiteSettings.php';
@@ -33,15 +37,15 @@ class Crisp
       return json_decode($data, TRUE);
     });
 
-    $this->userProfile          = new CrispUserProfile($this);
-    $this->website              = new CrispWebsite($this);
-    $this->websiteSettings      = new CrispWebsiteSettings($this);
-    $this->websiteVerify        = new CrispWebsiteVerify($this);
-    $this->websiteConversations = new CrispWebsiteConversations($this);
-    $this->websitePeople        = new CrispWebsitePeople($this);
-    $this->websiteOperators     = new CrispWebsiteOperators($this);
-    $this->websiteVisitors      = new CrispWebsiteVisitors($this);
-    $this->pluginSubscriptions  = new CrispPluginSubscriptions($this);
+    $this->userProfile          = new \Relief\Crisp\Ressources\CrispUserProfile($this);
+    $this->website              = new \Relief\Crisp\Ressources\CrispWebsite($this);
+    $this->websiteSettings      = new \Relief\Crisp\Ressources\CrispWebsiteSettings($this);
+    $this->websiteVerify        = new \Relief\Crisp\Ressources\CrispWebsiteVerify($this);
+    $this->websiteConversations = new \Relief\Crisp\Ressources\CrispWebsiteConversations($this);
+    $this->websitePeople        = new \Relief\Crisp\Ressources\CrispWebsitePeople($this);
+    $this->websiteOperators     = new \Relief\Crisp\Ressources\CrispWebsiteOperators($this);
+    $this->websiteVisitors      = new \Relief\Crisp\Ressources\CrispWebsiteVisitors($this);
+    $this->pluginSubscriptions  = new \Relief\Crisp\Ressources\CrispPluginSubscriptions($this);
   }
 
   public function setRestHost($host) {

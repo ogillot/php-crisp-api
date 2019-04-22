@@ -6,6 +6,8 @@
  * Copyright: 2018, Crisp IM
  */
 
+namespace Relief\Crisp\Ressources;
+
 class CrispWebsitePeople
 {
 

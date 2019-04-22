@@ -6,6 +6,8 @@
  * Copyright: 2018, Crisp IM
  */
 
+namespace Relief\Crisp\Ressources;
+
 class CrispWebsiteConversations
 {
 
@@ -13,9 +15,10 @@ class CrispWebsiteConversations
     $this->crisp = $parent;
   }
 
-   public function getList($websiteId, $page = 1) {
+   public function getList($websiteId, $page = 1, $query = []) {
+    $query = (is_array($query) && count($query) > 0) ? '?'.http_build_query($query) : '';
     $result = $this->crisp->_rest->get(
-      "website/$websiteId/conversations/$page"
+      "website/$websiteId/conversations/$page.$query"
     );
     return $result->decode_response()["data"];
   }

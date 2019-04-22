@@ -5,6 +5,9 @@
  * Author: Baptiste Jamin http://jamin.me/
  * Copyright: 2018, Crisp IM
  */
+
+namespace Relief\Crisp\Ressources;
+
 class CrispUserProfile
 {
   public function __construct($parent) {

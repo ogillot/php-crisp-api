@@ -1,5 +1,5 @@
 {
-    "name": "crispchat/php-crisp-api",
+    "name": "ogillot/php-crisp-api",
     "description": "Crisp API PHP Wrapper",
     "type": "library",
     "license": "MIT",
@@ -11,9 +11,6 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "tcdent/php-restclient": "^0.1.7"
-    },
-    "autoload": {
-        "files": ["crisp.php"]
+        "ogillot/php-restclient": "^0.1.8"
     }
 }
